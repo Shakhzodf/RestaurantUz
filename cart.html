@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Uzbek Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <img src="logo.png" alt="Restaurant Logo" class="logo">
+            <button class="menu-icon" onclick="toggleSidebar()">☰</button>
+        </div>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+        <a href="index.html">🏠 Home</a>
+        <a href="menu.html">🍽 Menu</a>
+        <a href="products.html">🛍 Products</a>
+    </div>
+
+    <section id="cart">
+        <h2>Order Summary</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: ￥<span id="total-price">0.00</span></p>
+
+        <h3>Delivery Information</h3>
+        <form id="delivery-form">
+            <input type="text" id="customer-name" placeholder="Your Name" required>
+            <input type="text" id="customer-address" placeholder="Delivery Address" required>
+            <input type="tel" id="customer-phone" placeholder="Phone Number" required>
+            <button type="button" onclick="placeOrder()">Place Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Uzbek Restaurant. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
